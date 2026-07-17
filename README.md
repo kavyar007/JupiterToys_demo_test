@@ -1,31 +1,81 @@
-# Playwright BDD Automation Framework
+# Jupiter Toys Automation Framework
 
-## Tech Stack
+## Overview
+
+UI automation framework developed using:
 
 - Playwright
 - TypeScript
-- Cucumber
-- Page Object Model
+- Cucumber BDD
 - Node.js
+
+
+## Application Under Test
+
+https://jupiter.cloud.planittesting.com/
+
+
+## Test Coverage
+
+### Contact Page
+
+✔ Mandatory field validation
+
+✔ Successful form submission
+
+✔ Data driven testing with multiple users
+
+
+### Shopping Cart
+
+✔ Add products
+
+✔ Validate product prices
+
+✔ Validate product subtotal
+
+✔ Validate total calculation
+
+
+## Framework Design
+
+Implemented:
+
+- Base Page reusable actions
+- Cucumber BDD
+- Scenario Outline
+- Environment configuration
+
 
 ## Installation
 
 npm install
 
-npx playwright install
 
-## Execute all tests
+## Execution
 
-npm test
 
-## Execute Contact Validation
+Run all tests:
 
-npm run test:contact
+npm test:all //run in order
 
-## Execute Contact Success
 
-npm run test:success
+Run contact validation:
 
-## Execute Cart Validation
+npm run test:"@error"
 
-npm run test:cart
+
+Run contact success:
+
+npm run test:"@success"
+
+
+Run cart:
+
+npm run test "@cart"
+
+
+## Reports
+
+HTML reports generated after execution.
+
