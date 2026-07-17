@@ -14,69 +14,18 @@ npm install
 
 npx playwright install
 
-## Application Under Test
+## Execute all tests
 
-https://jupiter.cloud.planittesting.com/
+npm test
 
+## Execute Contact Validation
 
-## Test Coverage
+npm run test:contact
 
-### Contact Page
+## Execute Contact Success
 
- Mandatory field validation
+npm run test:success
 
-Successful form submission
+## Execute Cart Validation
 
-Data driven testing with multiple users
-
-
-### Shopping Cart
-
-Add products
-
-Validate product prices
-
-Validate product subtotal
-
-Validate total calculation
-
-
-## Framework Design
-
-Implemented:
-- Base Page reusable actions
-- Cucumber BDD
-- Scenario Outline
-- Environment configuration
-
-## Installation
-
-npm install
-
-
-## Execution
-
-
-Run all tests:
-
-npm test :all  //run in order
-
-
-Run contact validation:
-
-npm run test @"error"
-
-
-Run contact success:
-
-npm run test @"success"
-
-
-Run cart:
-
-npm run test @"cart"
-
-
-## Reports
-
-HTML reports generated after execution.
+npm run test:cart
