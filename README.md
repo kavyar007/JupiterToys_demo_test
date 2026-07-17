@@ -15,16 +15,16 @@ npx playwright install
 
 ## Execute all tests
 
-npm test
+npm test:all 
 
 ## Execute Contact Validation
 
-npm run test:contact
+npm test -- --tags "@error"  
 
 ## Execute Contact Success
 
-npm run test:success
+npm test -- --tags "@success"  
 
 ## Execute Cart Validation
 
-npm run test:cart
+npm test -- --tags "@cart"  
