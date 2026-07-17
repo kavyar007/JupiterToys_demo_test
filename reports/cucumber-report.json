@@ -4,151 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "shopping-cart-validation;verify-cart-subtotal-and-total-calculation",
-        "keyword": "Scenario",
-        "line": 5,
-        "name": "Verify cart subtotal and total calculation",
+        "id": "contact-page-successful-submission;verify-successful-contact-form-submission-with-different-users",
+        "keyword": "Scenario Outline",
+        "line": 16,
+        "name": "Verify successful contact form submission with different users",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 812495300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "user is on homepage",
-            "match": {
-              "location": "src\\step-definitions\\contactNavigation.steps.ts:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3528994799
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "user navigates to shop page",
-            "match": {
-              "location": "src\\step-definitions\\cart.steps.ts:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2142794899
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "user buys 2 Stuffed Frog, 5 Fluffy Bunny and 3 Valentine Bear",
-            "match": {
-              "location": "src\\step-definitions\\cart.steps.ts:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 20693559399
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
-            "name": "user navigates to cart page",
-            "match": {
-              "location": "src\\step-definitions\\cart.steps.ts:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2073705799
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "product prices should be correct",
-            "match": {
-              "location": "src\\step-definitions\\cart.steps.ts:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 35370200
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "product subtotals should be correct",
-            "match": {
-              "location": "src\\step-definitions\\cart.steps.ts:62"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 27581300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 13,
-            "name": "cart total should equal sum of subtotals",
-            "match": {
-              "location": "src\\step-definitions\\cart.steps.ts:71"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5716700
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 571603699
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@cart",
-            "line": 4
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "shopping-cart-validation",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "Shopping cart validation",
-    "tags": [],
-    "uri": "features\\cartValidation.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
-        "id": "contact-page-validation;verify-contact-page-mandatory-field-validation",
-        "keyword": "Scenario",
-        "line": 4,
-        "name": "Verify contact page mandatory field validation",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 828781300
+              "duration": 1347904000
             }
           },
           {
@@ -157,11 +23,11 @@
             "line": 6,
             "name": "user is on homepage",
             "match": {
-              "location": "src\\step-definitions\\contactNavigation.steps.ts:11"
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 3509663999
+              "duration": 3132131100
             }
           },
           {
@@ -170,11 +36,11 @@
             "line": 7,
             "name": "user clicks on Contact link",
             "match": {
-              "location": "src\\step-definitions\\contactNavigation.steps.ts:29"
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:25"
             },
             "result": {
               "status": "passed",
-              "duration": 2093805500
+              "duration": 1603553499
             }
           },
           {
@@ -183,158 +49,24 @@
             "line": 8,
             "name": "user should be navigated to contact page",
             "match": {
-              "location": "src\\step-definitions\\contactNavigation.steps.ts:39"
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 4925699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "user clicks on submit button without entering details",
-            "match": {
-              "location": "src\\step-definitions\\contactPageError.steps.ts:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2074666600
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "mandatory field validation errors should be displayed",
-            "match": {
-              "location": "src\\step-definitions\\contactPageError.steps.ts:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 19524699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "user enters mandatory contact details",
-            "match": {
-              "location": "src\\step-definitions\\contactNavigation.steps.ts:57"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 10194480199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "mandatory field validation errors should disappear",
-            "match": {
-              "location": "src\\step-definitions\\contactPageError.steps.ts:23"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 14842600
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 429541799
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@error",
-            "line": 2
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "contact-page-validation",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "Contact page validation",
-    "tags": [],
-    "uri": "features\\contactPageError.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
-        "id": "contact-page-successful-submission;verify-successful-contact-form-submission",
-        "keyword": "Scenario",
-        "line": 4,
-        "name": "Verify successful contact form submission",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 705650199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 6,
-            "name": "user is on homepage",
-            "match": {
-              "location": "src\\step-definitions\\contactNavigation.steps.ts:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3518338599
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 7,
-            "name": "user clicks on Contact link",
-            "match": {
-              "location": "src\\step-definitions\\contactNavigation.steps.ts:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2095818500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "user should be navigated to contact page",
-            "match": {
-              "location": "src\\step-definitions\\contactNavigation.steps.ts:39"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3793200
+              "duration": 19551999
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 9,
-            "name": "user enters mandatory contact details",
+            "name": "user enters contact details \"John\" \"Smith\" \"john.smith@test.com\" \"111111111\" \"Test message one\"",
             "match": {
-              "location": "src\\step-definitions\\contactNavigation.steps.ts:57"
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 10196491499
+              "duration": 7706126500
             }
           },
           {
@@ -343,11 +75,11 @@
             "line": 10,
             "name": "user clicks on submit button",
             "match": {
-              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:10"
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:4"
             },
             "result": {
               "status": "passed",
-              "duration": 2083573700
+              "duration": 1577821700
             }
           },
           {
@@ -356,11 +88,12 @@
             "line": 11,
             "name": "successful submission message should be displayed",
             "match": {
-              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:22"
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:11"
             },
             "result": {
-              "status": "passed",
-              "duration": 365599799
+              "status": "failed",
+              "duration": 5036993700,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Thanks.*we appreciate your feedback/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Thanks.*we appreciate your feedback/)\u001b[22m\n\n    at captureRawStack (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\node_modules\\playwright-core\\lib\\coreBundle.js:3172:17)\n    at callMatcherAsStep (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12877:57)\n    at Object.toBeVisible (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12867:23)\n    at ContactPage.verifySuccessMessage (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\src\\pages\\contactPage.ts:137:7)\n    at World.<anonymous> (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\src\\step-definitions\\contactPageSuccess.steps.ts:15:27)"
             }
           },
           {
@@ -368,7 +101,448 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 484616599
+              "duration": 522459800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@success",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-page-successful-submission;verify-successful-contact-form-submission-with-different-users",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "Verify successful contact form submission with different users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 765535299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user is on homepage",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2991242600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user clicks on Contact link",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1611463700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "user should be navigated to contact page",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6559399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user enters contact details \"Sarah\" \"Brown\" \"sarah.brown@test.com\" \"222222222\" \"Test message two\"",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7730008299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user clicks on submit button",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1574263200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "successful submission message should be displayed",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:11"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5012950299,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Thanks.*we appreciate your feedback/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Thanks.*we appreciate your feedback/)\u001b[22m\n\n    at captureRawStack (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\node_modules\\playwright-core\\lib\\coreBundle.js:3172:17)\n    at callMatcherAsStep (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12877:57)\n    at Object.toBeVisible (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\node_modules\\playwright\\lib\\matchers\\expect.js:12867:23)\n    at ContactPage.verifySuccessMessage (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\src\\pages\\contactPage.ts:137:7)\n    at World.<anonymous> (C:\\Users\\hp\\source\\repos\\Playwright_BDD\\src\\step-definitions\\contactPageSuccess.steps.ts:15:27)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 499647400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@success",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-page-successful-submission;verify-successful-contact-form-submission-with-different-users",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Verify successful contact form submission with different users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 717706299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user is on homepage",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3013626100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user clicks on Contact link",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1595358299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "user should be navigated to contact page",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5170300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user enters contact details \"David\" \"Wilson\" \"david.wilson@test.com\" \"333333333\" \"Test message three\"",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7697244999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user clicks on submit button",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1587212100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "successful submission message should be displayed",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000140599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 432091000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@success",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-page-successful-submission;verify-successful-contact-form-submission-with-different-users",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Verify successful contact form submission with different users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 752557399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user is on homepage",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3006892100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user clicks on Contact link",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1610357799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "user should be navigated to contact page",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4374500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user enters contact details \"Emma\" \"Taylor\" \"emma.taylor@test.com\" \"444444444\" \"Test message four\"",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7683841499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user clicks on submit button",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1576111700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "successful submission message should be displayed",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132998600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 432786400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@success",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-page-successful-submission;verify-successful-contact-form-submission-with-different-users",
+        "keyword": "Scenario Outline",
+        "line": 20,
+        "name": "Verify successful contact form submission with different users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 773812699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user is on homepage",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3028879000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user clicks on Contact link",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1610327300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "user should be navigated to contact page",
+            "match": {
+              "location": "src\\step-definitions\\contactNavigation.steps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4119999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user enters contact details \"Michael\" \"Jones\" \"michael.jones@test.com\" \"555555555\" \"Test message five\"",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7682131399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user clicks on submit button",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1571545400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "successful submission message should be displayed",
+            "match": {
+              "location": "src\\step-definitions\\contactPageSuccess.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1989137700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 508541200
             }
           }
         ],

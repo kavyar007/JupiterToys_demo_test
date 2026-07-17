@@ -1,28 +1,74 @@
 <?xml version="1.0"?>
-<testsuite name="Cucumber" time="68.554" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-07-17T04:41:58.950Z">
-  <testcase classname="Shopping cart validation" name="Verify cart subtotal and total calculation" time="29.902">
-    <system-out><![CDATA[Given user is on homepage...................................................passed
-When user navigates to shop page............................................passed
-And user buys 2 Stuffed Frog, 5 Fluffy Bunny and 3 Valentine Bear...........passed
-And user navigates to cart page.............................................passed
-Then product prices should be correct.......................................passed
-And product subtotals should be correct.....................................passed
-And cart total should equal sum of subtotals................................passed]]></system-out>
-  </testcase>
-  <testcase classname="Contact page validation" name="Verify contact page mandatory field validation" time="19.178">
-    <system-out><![CDATA[Given user is on homepage...................................................passed
-When user clicks on Contact link............................................passed
-Then user should be navigated to contact page...............................passed
-When user clicks on submit button without entering details..................passed
-Then mandatory field validation errors should be displayed..................passed
-When user enters mandatory contact details..................................passed
-Then mandatory field validation errors should disappear.....................passed]]></system-out>
-  </testcase>
-  <testcase classname="Contact page successful submission" name="Verify successful contact form submission" time="19.462">
+<testsuite name="Cucumber" time="91.618" tests="5" skipped="0" failures="2" errors="0" timestamp="2026-07-17T05:08:09.606Z">
+  <testcase classname="Contact page successful submission" name="Verify successful contact form submission with different users - #1.1" time="20.965">
+    <failure type="ExpectError" message="[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed&#xA;&#xA;Locator: getByText(/Thanks.*we appreciate your feedback/)&#xA;Expected: visible&#xA;Timeout: 5000ms&#xA;Error: element(s) not found&#xA;&#xA;Call log:&#xA;[2m  - Expect &quot;to.be.visible&quot; with timeout 5000ms[22m&#xA;[2m  - waiting for getByText(/Thanks.*we appreciate your feedback/)[22m&#xA;"><![CDATA[Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+Locator: getByText(/Thanks.*we appreciate your feedback/)
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+[2m  - Expect "to.be.visible" with timeout 5000ms[22m
+[2m  - waiting for getByText(/Thanks.*we appreciate your feedback/)[22m
+
+    at captureRawStack (C:\Users\hp\source\repos\Playwright_BDD\node_modules\playwright-core\lib\coreBundle.js:3172:17)
+    at callMatcherAsStep (C:\Users\hp\source\repos\Playwright_BDD\node_modules\playwright\lib\matchers\expect.js:12877:57)
+    at Object.toBeVisible (C:\Users\hp\source\repos\Playwright_BDD\node_modules\playwright\lib\matchers\expect.js:12867:23)
+    at ContactPage.verifySuccessMessage (C:\Users\hp\source\repos\Playwright_BDD\src\pages\contactPage.ts:137:7)
+    at World.<anonymous> (C:\Users\hp\source\repos\Playwright_BDD\src\step-definitions\contactPageSuccess.steps.ts:15:27)]]></failure>
     <system-out><![CDATA[Given user is on homepage...................................................passed
 When user clicks on Contact link............................................passed
 Then user should be navigated to contact page...............................passed
-When user enters mandatory contact details..................................passed
+When user enters contact details "John" "Smith" "john.smith@test.com" "111111111" "Test message one"..passed
+And user clicks on submit button............................................passed
+Then successful submission message should be displayed......................failed]]></system-out>
+  </testcase>
+  <testcase classname="Contact page successful submission" name="Verify successful contact form submission with different users - #1.2" time="20.2">
+    <failure type="ExpectError" message="[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed&#xA;&#xA;Locator: getByText(/Thanks.*we appreciate your feedback/)&#xA;Expected: visible&#xA;Timeout: 5000ms&#xA;Error: element(s) not found&#xA;&#xA;Call log:&#xA;[2m  - Expect &quot;to.be.visible&quot; with timeout 5000ms[22m&#xA;[2m  - waiting for getByText(/Thanks.*we appreciate your feedback/)[22m&#xA;"><![CDATA[Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+Locator: getByText(/Thanks.*we appreciate your feedback/)
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+[2m  - Expect "to.be.visible" with timeout 5000ms[22m
+[2m  - waiting for getByText(/Thanks.*we appreciate your feedback/)[22m
+
+    at captureRawStack (C:\Users\hp\source\repos\Playwright_BDD\node_modules\playwright-core\lib\coreBundle.js:3172:17)
+    at callMatcherAsStep (C:\Users\hp\source\repos\Playwright_BDD\node_modules\playwright\lib\matchers\expect.js:12877:57)
+    at Object.toBeVisible (C:\Users\hp\source\repos\Playwright_BDD\node_modules\playwright\lib\matchers\expect.js:12867:23)
+    at ContactPage.verifySuccessMessage (C:\Users\hp\source\repos\Playwright_BDD\src\pages\contactPage.ts:137:7)
+    at World.<anonymous> (C:\Users\hp\source\repos\Playwright_BDD\src\step-definitions\contactPageSuccess.steps.ts:15:27)]]></failure>
+    <system-out><![CDATA[Given user is on homepage...................................................passed
+When user clicks on Contact link............................................passed
+Then user should be navigated to contact page...............................passed
+When user enters contact details "Sarah" "Brown" "sarah.brown@test.com" "222222222" "Test message two"..passed
+And user clicks on submit button............................................passed
+Then successful submission message should be displayed......................failed]]></system-out>
+  </testcase>
+  <testcase classname="Contact page successful submission" name="Verify successful contact form submission with different users - #1.3" time="18.052">
+    <system-out><![CDATA[Given user is on homepage...................................................passed
+When user clicks on Contact link............................................passed
+Then user should be navigated to contact page...............................passed
+When user enters contact details "David" "Wilson" "david.wilson@test.com" "333333333" "Test message three"..passed
+And user clicks on submit button............................................passed
+Then successful submission message should be displayed......................passed]]></system-out>
+  </testcase>
+  <testcase classname="Contact page successful submission" name="Verify successful contact form submission with different users - #1.4" time="15.206">
+    <system-out><![CDATA[Given user is on homepage...................................................passed
+When user clicks on Contact link............................................passed
+Then user should be navigated to contact page...............................passed
+When user enters contact details "Emma" "Taylor" "emma.taylor@test.com" "444444444" "Test message four"..passed
+And user clicks on submit button............................................passed
+Then successful submission message should be displayed......................passed]]></system-out>
+  </testcase>
+  <testcase classname="Contact page successful submission" name="Verify successful contact form submission with different users - #1.5" time="17.175">
+    <system-out><![CDATA[Given user is on homepage...................................................passed
+When user clicks on Contact link............................................passed
+Then user should be navigated to contact page...............................passed
+When user enters contact details "Michael" "Jones" "michael.jones@test.com" "555555555" "Test message five"..passed
 And user clicks on submit button............................................passed
 Then successful submission message should be displayed......................passed]]></system-out>
   </testcase>

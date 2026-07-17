@@ -1,5 +1,4 @@
 import {When,Then} from "@cucumber/cucumber";
-
 import { contactPage } from "./contactNavigation.steps";
 
 When(

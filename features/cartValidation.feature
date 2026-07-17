@@ -1,6 +1,5 @@
 Feature: Shopping cart validation
 
-
 @cart
 Scenario: Verify cart subtotal and total calculation
 

@@ -65,8 +65,6 @@ export class ContactPage extends Basepage {
 
     }
 
-
-
   async clickSubmit(): Promise<void> {
 
     await expect(
@@ -110,8 +108,6 @@ export class ContactPage extends Basepage {
 
     }
 
-
-
     async verifyValidationErrors(): Promise<void> {
 
 
@@ -139,6 +135,40 @@ export class ContactPage extends Basepage {
     await expect(
         this.successMessage
     ).toBeVisible();
+
+}
+async enterContactDetails(
+    forename:string,
+    surname:string,
+    email:string,
+    telephone:string,
+    message:string
+): Promise<void>{
+
+    await this.fill(
+        this.forenameTextbox,
+        forename
+    );
+
+    await this.fill(
+        this.surnameTextbox,
+        surname
+    );
+
+    await this.fill(
+        this.emailTextbox,
+        email
+    );
+
+    await this.fill(
+        this.telephoneTextbox,
+        telephone
+    );
+
+    await this.fill(
+        this.messageTextbox,
+        message
+    );
 
 }
     

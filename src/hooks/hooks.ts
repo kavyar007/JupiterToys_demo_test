@@ -1,31 +1,14 @@
-import {
-    Before,
-    After,
-    setDefaultTimeout
-} from "@cucumber/cucumber";
-
-
-import {
-    chromium,
-    Browser,
-    Page
-} from "playwright";
-
-
+import {Before,After,setDefaultTimeout} from "@cucumber/cucumber";
+import {chromium,Browser,Page} from "playwright";
 import { pageFixture } from "./pageFixture";
-
-
 setDefaultTimeout(30000);
 
-
 let browser: Browser;
-
-
-Before(async()=>{
+Before(async () => {
 
     browser = await chromium.launch({
-        headless:false,
-        slowMo:2000
+        headless: false,
+        slowMo: 1500
     });
 
     const page = await browser.newPage();
@@ -35,8 +18,7 @@ Before(async()=>{
 
 });
 
-
-After(async()=>{
+After(async () => {
 
 
     await browser.close();
