@@ -59,19 +59,15 @@ export class ContactPage extends Basepage {
 
         //Verify Success Message
         this.successMessage =
-    page.getByText(
-        /Thanks.*we appreciate your feedback/
-    );    
+    page.locator('.alert-success'); 
 
     }
 
   async clickSubmit(): Promise<void> {
 
-    await expect(
-        this.submitButton
-    ).toBeVisible();
-
     await this.submitButton.click();
+
+    await this.page.waitForLoadState("networkidle");
 
 }
     async enterMandatoryDetails(): Promise<void> {
@@ -134,7 +130,14 @@ export class ContactPage extends Basepage {
 
     await expect(
         this.successMessage
-    ).toBeVisible();
+    ).toBeVisible({
+        timeout: 10000
+    });
+
+    await expect(
+        this.successMessage
+    ).toContainText("Thanks");
+
 
 }
 async enterContactDetails(

@@ -16,16 +16,20 @@ page.locator('.total');
 
 }
 
-async verifyPrices(){
-await expect(
-this.page.getByText('$10.99')
-).toBeVisible();
-await expect(
-this.page.getByText('$9.99')
-).toBeVisible();
-await expect(
-this.page.getByText('$14.99')
-).toBeVisible();
+async verifyPrices(): Promise<void> {
+
+    const rows = this.page.locator('tbody tr');
+
+    await expect(rows).toHaveCount(3);
+
+    await expect(rows.nth(0))
+        .toContainText('$10.99');
+
+    await expect(rows.nth(1))
+        .toContainText('$9.99');
+
+    await expect(rows.nth(2))
+        .toContainText('$14.99');
 
 }
 async verifySubTotals(){

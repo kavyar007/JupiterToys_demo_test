@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
   "test": "cucumber-js",
-  "report": "ts-node report.ts",
-  "test:report": "npm test && npm run report"
+  "test:error": "cucumber-js --tags @error",
+  "test:success": "cucumber-js --tags @success",
+  "test:cart": "cucumber-js --tags @cart",
+  "test:all": "npm run test:error && npm run test:success && npm run test:cart"
 },
   "keywords": [],
   "author": "",

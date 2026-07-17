@@ -4,14 +4,12 @@ import { pageFixture } from "./pageFixture";
 setDefaultTimeout(30000);
 
 let browser: Browser;
-Before(async () => {
+Before(async()=>{
 
-    browser = await chromium.launch({
+     browser = await chromium.launch({
         headless: false,
-        slowMo: 1500
+        slowMo: 1000
     });
-
-    const page = await browser.newPage();
 
     pageFixture.page =
         await browser.newPage();
