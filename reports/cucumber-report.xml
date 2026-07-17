@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="68.554" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-07-17T04:41:58.950Z">
+  <testcase classname="Shopping cart validation" name="Verify cart subtotal and total calculation" time="29.902">
+    <system-out><![CDATA[Given user is on homepage...................................................passed
+When user navigates to shop page............................................passed
+And user buys 2 Stuffed Frog, 5 Fluffy Bunny and 3 Valentine Bear...........passed
+And user navigates to cart page.............................................passed
+Then product prices should be correct.......................................passed
+And product subtotals should be correct.....................................passed
+And cart total should equal sum of subtotals................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Contact page validation" name="Verify contact page mandatory field validation" time="19.178">
+    <system-out><![CDATA[Given user is on homepage...................................................passed
+When user clicks on Contact link............................................passed
+Then user should be navigated to contact page...............................passed
+When user clicks on submit button without entering details..................passed
+Then mandatory field validation errors should be displayed..................passed
+When user enters mandatory contact details..................................passed
+Then mandatory field validation errors should disappear.....................passed]]></system-out>
+  </testcase>
+  <testcase classname="Contact page successful submission" name="Verify successful contact form submission" time="19.462">
+    <system-out><![CDATA[Given user is on homepage...................................................passed
+When user clicks on Contact link............................................passed
+Then user should be navigated to contact page...............................passed
+When user enters mandatory contact details..................................passed
+And user clicks on submit button............................................passed
+Then successful submission message should be displayed......................passed]]></system-out>
+  </testcase>
+</testsuite>

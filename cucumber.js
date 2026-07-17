@@ -11,7 +11,9 @@ module.exports = {
       "ts-node/register"
     ],
     format: [
-      "progress"
+      "progress",
+      "json:reports/cucumber-report.json",
+      "junit:reports/cucumber-report.xml"
     ]
   }
 };
